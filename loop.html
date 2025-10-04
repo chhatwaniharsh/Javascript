@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Loops</h3>
+
+    <script>
+        
+        //Array
+        //for..in (indexings)
+        const nums=[10,20,30,40,50]
+
+        for(let i in nums){
+            console.log('For-->',i,nums[i])
+        }
+        
+
+        //for ..of (elements)
+        for(let i of nums){
+           console.log('For-->',i,nums[i])
+        }
+
+       //-------Object----------
+       //for in [propertises] = for in this is propertis etreters
+        const stu ={"roll":36, "name":"Harsh","city":"Pune"}
+        for(let i in stu){
+            console.log(i,stu[i])
+        }
+
+
+    </script>
+
+</body>
+</html>

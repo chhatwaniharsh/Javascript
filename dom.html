@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h3>Document Object Model (Dom) </h3>
+
+   <div>
+    <h3 id="head1">India</h3>
+    <p id ="para1">
+        A paragraph is a group of related sentences focused on a single main idea, serving as a self-contained unit of writing to organize and structure text, making it easier for the reader to follow the author's thoughts. Paragraphs are conventionally marked by an indentation at the start of the first sentence or by beginning on a new line, and they typically contain a topic sentence
+    </p>
+   </div>
+
+    <div>
+    <h3 class="head2">Maharastra</h3>
+    <p class ="parae">
+        A paragraph is a group of related sentences focused on a single main idea, serving as a self-contained unit of writing to organize and structure text, making it easier for the reader to follow the author's thoughts. Paragraphs are conventionally marked by an indentation at the start of the first sentence or by beginning on a new line, and they typically contain a topic sentence
+    </p>
+   </div>
+
+   <p id="parag1" class="para">Para 1</p>
+   <p class="parag">Para 2</p>
+
+   <input type="text" placeholder="Enter Your Message here..." id="input1" class="input">
+
+   <script>
+    // Query Selector All
+    const para = document.querySelectorAll('#parag1')
+    console.log(para)
+
+    const parag = document.querySelectorAll('.parag')
+    console.log(parag)
+
+    const p = document.querySelectorAll('p')
+    console.log(p)
+    
+    //console.log(document)
+    //id
+    const head1=document.getElementById('head1') 
+    console.log(head1)
+
+    const para1=document.getElementById('para1') 
+    console.log(para1) 
+    
+    //class
+    const head2=document.getElementsByClassName('head2') 
+    console.log(head2)
+
+    const parae = document.getElementsByClassName('parae');
+    console.log(parae)
+
+    const hedings = document.getElementsByTagName('h3');
+    console.log(hedings)
+
+    // Inner Text
+    const head3=document.getElementById('head1') 
+    console.log(head3.innerText)
+
+    // Inner Text Manipulation
+    const head4=document.getElementById('head1') 
+    head4.innerText="INDIA"
+    console.log(head4)
+
+    // Apply or Change Style
+    const head5=document.getElementById('head1') 
+    head5.style.color = "red"
+    head5.style.textAlign = "center"
+    console.log(head5)
+
+    // Fetch any attributes
+    const inp=document.getElementById('input1') 
+    console.log(inp.id)
+    console.log(inp.type)
+    console.log(inp.placeholder)
+
+
+</script>
+     
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Project</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            #header-section{
+                padding: 10px;
+                border: 1px solid gray;
+            }
+            #content-section{
+                padding: 10px;
+                border: 1px solid black;
+                font-size: 18px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="header-section">
+            <span>Text Size:</span>
+            <button onclick="changeFontSize('Small')">Small</button>
+            <button onclick="changeFontSize('Standard')">Standard</button>
+            <button onclick="changeFontSize('Large')">Large</button>
+
+            <span style="margin-left: 8px;">Theme:</span>
+            <button onclick="changeTheme('Light')">Light</button>
+            <button onclick="changeTheme('Dark')">Dark</button>
+        </div>
+
+        <div id="content-section">
+            <h3>Temprature Converter</h3>
+            <label for="">Degree Celsius : </label>
+            <input type="number" name="ip" id="inp" oninput="convertTemperature()">
+            <label for="">Fahrenheit : </label>
+            <input type="text" name="op" id="out">
+            <br>
+            
+        </div>
+        
+        <script>
+            function changeFontSize(fontsize){
+                const contentSection = document.getElementById('content-section')
+                if(fontsize=='Small')
+                {
+                    contentSection.style.fontSize = '16px'
+                }
+                else if(fontsize=='Standard')
+                {
+                    contentSection.style.fontSize = '18px'
+                }
+                else if(fontsize=='Large')
+                {
+                    contentSection.style.fontSize = '22px'
+                }
+            }
+            function changeTheme(theme){
+                const contentSection = document.getElementById('content-section')
+                if(theme=='Light'){
+                    contentSection.style.color = 'black'
+                    contentSection.style.backgroundColor = 'white'
+                }
+                else if(theme=='Dark'){
+                    contentSection.style.color = 'white'
+                    contentSection.style.backgroundColor = 'black'
+                }
+            }
+            function convertTemperature(){
+                const inputEle = document.querySelector('#inp')
+                // console.log(inputEle.value)
+                const outputEle = document.querySelector('#out')
+                if (inputEle.value == ""){
+                    outputEle.value = ""
+                }
+                else{
+                    outputEle.value = parseFloat((inputEle.value * (9/5)) + 32)
+                }
+            }
+        </script>
+    </body>
+</html>

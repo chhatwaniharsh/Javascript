@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Welcome to home page</h1>
+        
+        <script>
+
+            /* Use of Var */
+            console.log(a) //can access a before defining
+            var a = 'ABC'
+            console.log(a)
+
+            var a = 'XYZ' //Redeclaration is allowed
+            console.log(a)
+
+            a = 'PQR'     //Reallocation is allowed
+            console.log(a)
+
+            /* Use of Let */
+            // console.log(b) --> //cannot access b before defining
+            let b = 10 
+            console.log(b)
+
+            // let b = 20 --> //Redeclaration not allowed
+            // console.log(b)
+
+            b = 20
+            console.log(b) //Reallocation is allowed
+
+            /* Use of Const */
+            // console.log(c) //cannot access c before defining
+            const pi = 3.14
+
+            const c = 'Harsh'
+            console.log(c)
+
+            // const c = 'ABC' //Redeclaration is not allowed
+            // console.log(c)
+
+            // c = 'PQR'     //Reallocation is not allowed
+            // console.log(c)
+
+
+            /* Functions in js */
+            function greet(){
+                console.log("Hello")
+            }
+            greet()
+
+            function add(x,y){
+                let res = x + y
+                console.log("Addition =",res)
+            }
+            add(10,20)
+
+
+            /* Anonymous or Arrow Function */
+            let add = (x,y)=>{
+                            console.log("Additions =",x+y)
+                        }
+            add(10,20)
+
+            let greet = ()=>{
+                console.log("Hello")
+            }
+            greet()
+
+
+            /* Functions in js */
+            function greet(fun){
+                fun("Hello")
+            }
+            greet(console.log)
+
+            
+            /* Array */     //Mutable,Ordered,Follows Positive Indexing
+            let arr = [10,'Harsh',true,3.14]
+            console.log(arr)
+            console.log(arr[1])
+            arr.push('ABC')
+            console.log(arr)
+            arr.pop()
+            console.log(arr)
+
+
+            /* Object */
+            let stu = {'Name':'Harsh', Age:21 , 'Batch':'B74'}
+            console.log(stu)
+            stu.RollNo=35
+            console.log(stu)
+            stu.RollNo=36
+            console.log(stu)
+            delete stu.Batch
+            console.log(stu)
+
+
+        </script>
+    </body>
+</html>

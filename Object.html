@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Object</h3>
+
+    <script>
+        
+        // Object
+        const obj1 = {} //Empty Object
+        console.log(obj1)   //Empty Object
+
+        const obj2 = new Object()
+        console.log(obj2)
+
+        const obj3 = {'Roll' : 36,'Name' : 'Harsh','City' : 'Pune'}
+        console.log(obj3)
+
+        const stud = {'roll':30,'name':'Harsh'}
+        console.log(stud)
+
+        // Data Addition:
+        stud.city = 'Jalgaon'   // Data Addition 1
+        console.log(stud)
+        stud['marks']=96    // Data Addition 2
+        console.log(stud)
+
+        // Data Updation:
+        stud.city = 'Pune'  //Data Updation 1
+        console.log(stud)
+        stud['marks']=98    //Data Updation 2
+        console.log(stud)
+
+        //Data Deletion:
+        delete stud.city    //Data Deletion 1
+        console.log(stud)
+        delete stud['marks']    //Data Deletion 2
+        console.log(stud)
+
+    </script>
+
+</body>
+</html>

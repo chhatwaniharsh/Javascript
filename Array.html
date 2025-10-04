@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Array</h3>
+
+    <script>
+
+        // Array
+        const arr1 = [] //Empty Array
+        console.log(arr1)   //Empty Array
+
+        const arr2 = new Array()
+        console.log(arr2)
+
+        const arr3 = [1,true,'Harsh',96.39]
+        console.log(arr3)
+
+        const arr4 = new Array(2,false,'ABC',36.85)
+        console.log(arr4)
+        
+
+        /* Array Methods */
+
+        // Unshift:
+        const arr5 = [10,20,30]
+        arr5.unshift(0,5)
+        console.log(arr5)
+
+        // Push:
+        const arr6 = [10,20,30]
+        arr6.push(40,50)
+        console.log(arr6)
+
+        // Shift:
+        const arr7 = [25,35,45]
+        arr7.shift()
+        console.log(arr7)
+
+        // Pop:
+        const arr8 = [25,35,45]
+        arr8.pop()
+        console.log(arr8)
+
+        // Reverse:
+        const arr9 = [10,20,30]
+        arr9.reverse()
+        console.log(arr9)
+
+        // Sort:
+        const arr10 = ['Hello','Harsh','ABC','XYZ']
+        arr10.sort()    //Asc
+        console.log(arr10)
+        arr10.sort().reverse()  //Desc
+        console.log(arr10)
+
+        const arr11 = [16,102,30,10,1,45]
+        arr11.sort( (a,b)=>{return a-b} )   //Asc
+        console.log(arr11)
+
+        const arr12 = [16,102,30,10,1,45]
+        arr12.sort( (a,b)=>{return b-a} )   //Desc
+        console.log(arr12)
+
+        // Map(IMPORTANT):
+        const nums = [10,20,30,40,50]
+        console.log(nums)
+
+        const square = nums.map( (ele)=>{ return ele*ele} )
+        console.log(square)
+        const cube = nums.map( (ele)=>{ return ele**3} )
+        console.log(cube)
+        const half = nums.map( (ele)=>{ return ele/2} )
+        console.log(half)
+
+    </script>
+</body>
+</html>

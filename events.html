@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        .para{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <button onclick="handleClick()">Click Me</button>
+    <button onclick="doubleClick()">Double Click Me</button>
+    <p id="para1" class ="para">
+        A paragraph is a group of related sentences focused on a single main idea, serving as a self-contained unit of writing to organize and structure text, making it easier for the reader to follow the author's thoughts. Paragraphs are conventionally marked by an indentation at the start of the first sentence or by beginning on a new line, and they typically contain a topic sentence
+    </p>
+    <button onclick="changeStyle()">Click Here</button>
+
+    <script>
+        // Handler Function
+        function handleClick(){
+            console.log("Clicked...!")
+        }
+        function doubleClick(){
+            window.alert("Hello!!")
+        }
+        function changeStyle(){
+            const para = document.getElementById('para1')
+            para.style.color = "red"
+            para.style.border = "solid"
+            para.style.borderColor = "black"
+        }
+    </script>
+</body>
+</html>
